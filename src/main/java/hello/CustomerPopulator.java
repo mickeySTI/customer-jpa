@@ -48,6 +48,27 @@ public class CustomerPopulator implements CommandLineRunner {
 			log.info(bauer.toString());
 		}
 		log.info("");
+		
+		
+		
+		// fetch all customers and order by last name
+				log.info("Customers found with findAll() and sorted by last name:");
+				log.info("-------------------------------");
+				for (Customer customerSorted : repository.findAllByOrderByLastNameAsc()) {
+					log.info(customerSorted.toString());
+				}
+				log.info("");
+				
+				
+				// fetch first three and order by lastname
+				log.info("First 3 customers found with findAll() and sorted by last name:");
+				log.info("-------------------------------");
+				for (Customer customerFirstThree : repository.findFirst3ByOrderByLastNameAsc()) {
+					log.info(customerFirstThree.toString());
+				}
+				log.info("");
+		
+		
 	}
 
 }
