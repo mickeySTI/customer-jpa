@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>customers</title>
+  </head>
+  <body>
+    <h1>Our Customers</h1>
+
+    <div th:each="customer: ${customers}">
+      <p th:text="${customer.firstName} + ' ' + ${customer.lastName}"></p>   <!--- This is to iterate over list of customers-->
+    </div>
+
+  </body>
+</html>

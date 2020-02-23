@@ -2,14 +2,17 @@ package hello;
 
 import javax.annotation.Resource;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
+@Controller // DONT FORGET ANNOTATION
 public class CustomerController {
 	
 	
 	@Resource
-	CustomerRepository customerRepo; // Gives us the ability to inject repo
+	CustomerRepository customerRepo; // Gives us the ability to inject repo into controller
 	
 	
 	@RequestMapping("/customers")

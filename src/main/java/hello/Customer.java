@@ -8,7 +8,15 @@ import javax.persistence.Id;
 @Entity // table
 public class Customer {
 	
-	 	@Id
+	
+	public String getFirstName() {
+		return firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	
+	 @Id
 	  @GeneratedValue(strategy=GenerationType.AUTO)
 	  private Long id; // Row
 	  private String firstName; // Column
